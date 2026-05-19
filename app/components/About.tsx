@@ -16,7 +16,7 @@ export default function About() {
           <div className="relative">
             <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
               <Image
-                src="https://picsum.photos/seed/bloom-about/800/1000"
+                src="https://images.unsplash.com/YgymLeLqMFk?w=800&h=1000&fit=crop&q=80"
                 alt="We Bloom Events team creating a floral arrangement"
                 fill
                 className="object-cover"

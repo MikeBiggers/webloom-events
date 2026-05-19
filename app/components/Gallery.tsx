@@ -2,33 +2,33 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "https://picsum.photos/seed/bloom1/800/600",
-    alt: "Wedding reception floral decoration",
+    src: "https://images.unsplash.com/__vggaw2Nzk?w=800&h=600&fit=crop&q=80",
+    alt: "Outdoor wedding arch with flowers",
     span: "col-span-2 row-span-2",
   },
   {
-    src: "https://picsum.photos/seed/bloom2/600/400",
-    alt: "Floral table centrepiece",
+    src: "https://images.unsplash.com/3J-n9VVDCYw?w=600&h=400&fit=crop&q=80",
+    alt: "Floral centrepiece table setting",
     span: "",
   },
   {
-    src: "https://picsum.photos/seed/bloom3/600/400",
-    alt: "Wedding table setting",
+    src: "https://images.unsplash.com/s-erZ7110cA?w=600&h=400&fit=crop&q=80",
+    alt: "Wedding dining tables with floral arrangements",
     span: "",
   },
   {
-    src: "https://picsum.photos/seed/bloom4/600/800",
-    alt: "Bridal bouquet",
+    src: "https://images.unsplash.com/kdlfXY9rvZA?w=600&h=800&fit=crop&q=80",
+    alt: "Wedding arch with flowers and greenery",
     span: "row-span-2",
   },
   {
-    src: "https://picsum.photos/seed/bloom5/800/400",
-    alt: "Corporate event decoration",
+    src: "https://images.unsplash.com/M9SZZbp_FJk?w=800&h=400&fit=crop&q=80",
+    alt: "Wedding table with flowers and greenery",
     span: "col-span-2",
   },
   {
-    src: "https://picsum.photos/seed/bloom6/600/400",
-    alt: "Celebration party decoration",
+    src: "https://images.unsplash.com/-OAYZjLwnnc?w=600&h=400&fit=crop&q=80",
+    alt: "Outdoor table setting with floral centrepieces",
     span: "",
   },
 ];
