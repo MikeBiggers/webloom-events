@@ -2,32 +2,32 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&q=80",
+    src: "https://picsum.photos/seed/bloom1/800/600",
     alt: "Wedding reception floral decoration",
     span: "col-span-2 row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&h=400&fit=crop&q=80",
+    src: "https://picsum.photos/seed/bloom2/600/400",
     alt: "Floral table centrepiece",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&h=400&fit=crop&q=80",
+    src: "https://picsum.photos/seed/bloom3/600/400",
     alt: "Wedding table setting",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?w=600&h=800&fit=crop&q=80",
+    src: "https://picsum.photos/seed/bloom4/600/800",
     alt: "Bridal bouquet",
     span: "row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1511795409834-432f7b1728d2?w=800&h=400&fit=crop&q=80",
+    src: "https://picsum.photos/seed/bloom5/800/400",
     alt: "Corporate event decoration",
     span: "col-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1561587575-abeb783a5dbd?w=600&h=400&fit=crop&q=80",
+    src: "https://picsum.photos/seed/bloom6/600/400",
     alt: "Celebration party decoration",
     span: "",
   },
