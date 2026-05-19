@@ -2,33 +2,33 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "https://images.unsplash.com/__vggaw2Nzk?w=800&h=600&fit=crop&q=80",
+    src: "https://images.unsplash.com/photo-1769812343890-4e406a33cfbe?w=800&h=600&fit=crop&q=80",
     alt: "Outdoor wedding arch with flowers",
     span: "col-span-2 row-span-2",
   },
   {
-    src: "https://images.unsplash.com/3J-n9VVDCYw?w=600&h=400&fit=crop&q=80",
+    src: "https://images.unsplash.com/photo-1758810741900-0b2250ded8b3?w=600&h=400&fit=crop&q=80",
     alt: "Floral centrepiece table setting",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/s-erZ7110cA?w=600&h=400&fit=crop&q=80",
+    src: "https://images.unsplash.com/photo-1758810744035-c88d4225870c?w=600&h=400&fit=crop&q=80",
     alt: "Wedding dining tables with floral arrangements",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/kdlfXY9rvZA?w=600&h=800&fit=crop&q=80",
+    src: "https://images.unsplash.com/photo-1641834919507-b0271fe5186b?w=600&h=800&fit=crop&q=80",
     alt: "Wedding arch with flowers and greenery",
     span: "row-span-2",
   },
   {
-    src: "https://images.unsplash.com/M9SZZbp_FJk?w=800&h=400&fit=crop&q=80",
-    alt: "Wedding table with flowers and greenery",
+    src: "https://images.unsplash.com/photo-1758810742903-535dc084c96b?w=800&h=400&fit=crop&q=80",
+    alt: "Outdoor table setting with floral centrepieces",
     span: "col-span-2",
   },
   {
-    src: "https://images.unsplash.com/-OAYZjLwnnc?w=600&h=400&fit=crop&q=80",
-    alt: "Outdoor table setting with floral centrepieces",
+    src: "https://images.unsplash.com/photo-1581938165093-050aeb5ef218?w=600&h=400&fit=crop&q=80",
+    alt: "Pink and white flower wall",
     span: "",
   },
 ];
