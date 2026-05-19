@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF7F2;
+  --color-ivory-dark: #F0E8DE;
+  --color-petal: #F2D6D8;
+  --color-bloom: #C17F87;
+  --color-bloom-dark: #9E5F68;
+  --color-champagne: #C9A96E;
+  --color-champagne-light: #EAD9B0;
+  --color-leaf: #8FAF8C;
+  --color-bark: #2C2C2C;
+  --color-bark-light: #5A5A5A;
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-jost);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-bark);
+  font-family: var(--font-jost), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
