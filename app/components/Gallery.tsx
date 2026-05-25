@@ -2,33 +2,33 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "https://images.unsplash.com/photo-1769812343890-4e406a33cfbe?w=800&h=600&fit=crop&q=80",
-    alt: "Outdoor wedding arch with flowers",
+    src: "/instagram/Event1.jpg",
+    alt: "Outdoor wedding reception with fairy lights",
     span: "col-span-2 row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1758810741900-0b2250ded8b3?w=600&h=400&fit=crop&q=80",
-    alt: "Floral centrepiece table setting",
+    src: "/instagram/Event2.jpg",
+    alt: "Bride and groom beneath a floral arch",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1758810744035-c88d4225870c?w=600&h=400&fit=crop&q=80",
-    alt: "Wedding dining tables with floral arrangements",
+    src: "/instagram/Event4.jpg",
+    alt: "Elegant outdoor table setting at a castle venue",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1641834919507-b0271fe5186b?w=600&h=800&fit=crop&q=80",
-    alt: "Wedding arch with flowers and greenery",
+    src: "/instagram/Event3.jpg",
+    alt: "Candlelit dinner with deep floral centrepiece",
     span: "row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1758810742903-535dc084c96b?w=800&h=400&fit=crop&q=80",
-    alt: "Outdoor table setting with floral centrepieces",
+    src: "/instagram/Event5.jpg",
+    alt: "Botanical garden table with moss candelabras",
     span: "col-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1581938165093-050aeb5ef218?w=600&h=400&fit=crop&q=80",
-    alt: "Pink and white flower wall",
+    src: "/instagram/Event6.jpg",
+    alt: "Creative botanical bridal accessory",
     span: "",
   },
 ];

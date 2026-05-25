@@ -1,27 +1,24 @@
-"use client";
+import Image from "next/image";
 
-import { useEffect } from "react";
-
-const posts = [
-  { shortcode: "DTm6fAOjFVm", type: "reel",  label: "Wedding decoration reel" },
-  { shortcode: "DMLcT-pNcR0", type: "video", label: "Event decoration video" },
-  { shortcode: "DL2ogHsNdPv", type: "photo", label: "Event decoration" },
-  { shortcode: "DWjxtRFjnNC", type: "photo", label: "Floral styling" },
-  { shortcode: "DQ9IcXZCEkY", type: "photo", label: "Event setup" },
-  { shortcode: "DL2t0B0trO_", type: "photo", label: "Decoration details" },
-];
+const InstagramIcon = ({ size = 16 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+  </svg>
+);
 
 export default function InstagramFeed() {
-  useEffect(() => {
-    // Load Instagram embed script once
-    if (document.getElementById("instagram-embed-script")) return;
-    const script = document.createElement("script");
-    script.id = "instagram-embed-script";
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <section id="instagram" className="py-24 px-6 bg-ivory">
       <div className="max-w-6xl mx-auto">
@@ -31,7 +28,7 @@ export default function InstagramFeed() {
             className="text-sm tracking-[0.35em] uppercase mb-4 text-bloom"
             style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
           >
-            Follow Our Journey
+            Behind the Scenes
           </p>
           <h2
             className="text-5xl md:text-6xl font-light italic text-bark"
@@ -44,7 +41,7 @@ export default function InstagramFeed() {
             className="mt-6 text-bark-light text-base max-w-xl mx-auto"
             style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
           >
-            Real events, real moments — follow{" "}
+            Follow{" "}
             <a
               href="https://www.instagram.com/webloomevents/"
               target="_blank"
@@ -53,69 +50,62 @@ export default function InstagramFeed() {
             >
               @webloomevents
             </a>{" "}
-            for daily inspiration.
+            for daily inspiration from our latest events.
           </p>
         </div>
 
-        {/* Videos row */}
-        <div className="grid sm:grid-cols-2 gap-6 mb-6">
-          {posts
-            .filter((p) => p.type === "reel" || p.type === "video")
-            .map((post) => (
+        {/* Video + photo grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          {/* Video */}
+          <div className="relative rounded-2xl overflow-hidden bg-bark shadow-lg">
+            <video
+              src="/instagram/Video1.mp4"
+              className="w-full h-full object-cover max-h-[520px]"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+            />
+          </div>
+
+          {/* Side photo grid */}
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { src: "/instagram/Event1.jpg", alt: "Outdoor reception with fairy lights" },
+              { src: "/instagram/Event2.jpg", alt: "Bride and groom with floral arch" },
+              { src: "/instagram/Event4.jpg", alt: "Castle venue table setting" },
+              { src: "/instagram/Event6.jpg", alt: "Botanical bridal accessory" },
+            ].map((photo) => (
               <div
-                key={post.shortcode}
-                className="rounded-2xl overflow-hidden shadow-md border border-petal"
+                key={photo.src}
+                className="relative aspect-square rounded-xl overflow-hidden group"
               >
-                <blockquote
-                  className="instagram-media"
-                  data-instgrm-permalink={`https://www.instagram.com/${post.type === "reel" ? "reel" : "p"}/${post.shortcode}/`}
-                  data-instgrm-version="14"
-                  style={{ margin: 0, width: "100%", minWidth: "100%" }}
-                >
-                  <a
-                    href={`https://www.instagram.com/${post.type === "reel" ? "reel" : "p"}/${post.shortcode}/`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center h-64 bg-petal text-bloom text-sm tracking-wide"
-                    style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
-                  >
-                    View on Instagram →
-                  </a>
-                </blockquote>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
               </div>
             ))}
+          </div>
         </div>
 
-        {/* Photos row */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {posts
-            .filter((p) => p.type === "photo")
-            .map((post) => (
-              <div
-                key={post.shortcode}
-                className="rounded-2xl overflow-hidden shadow-md border border-petal"
-              >
-                <blockquote
-                  className="instagram-media"
-                  data-instgrm-permalink={`https://www.instagram.com/p/${post.shortcode}/`}
-                  data-instgrm-version="14"
-                  style={{ margin: 0, width: "100%", minWidth: "100%" }}
-                >
-                  <a
-                    href={`https://www.instagram.com/p/${post.shortcode}/`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center h-52 bg-petal text-bloom text-sm tracking-wide"
-                    style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
-                  >
-                    View on Instagram →
-                  </a>
-                </blockquote>
-              </div>
-            ))}
+        {/* Wide photo */}
+        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-md mb-10">
+          <Image
+            src="/instagram/Event5.jpg"
+            alt="Botanical garden table with moss candelabras"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-bark/20" />
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center">
           <a
             href="https://www.instagram.com/webloomevents/"
             target="_blank"
@@ -123,6 +113,7 @@ export default function InstagramFeed() {
             className="inline-flex items-center gap-2 text-sm tracking-widest uppercase border border-bloom text-bloom px-8 py-3 rounded-full hover:bg-bloom hover:text-ivory transition-colors duration-300"
             style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
           >
+            <InstagramIcon size={16} />
             Follow @webloomevents
           </a>
         </div>
