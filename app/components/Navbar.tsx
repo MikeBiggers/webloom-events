@@ -84,14 +84,31 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-bark p-1"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: language switcher + hamburger always visible */}
+        <div className="md:hidden flex items-center gap-3">
+          <div className="flex items-center gap-1 text-sm tracking-widest" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
+            <button
+              onClick={() => setLang("en")}
+              className={`uppercase transition-colors duration-200 ${lang === "en" ? "text-bloom font-medium" : "text-bark-light"}`}
+            >
+              EN
+            </button>
+            <span className="text-bark-light/40">|</span>
+            <button
+              onClick={() => setLang("es")}
+              className={`uppercase transition-colors duration-200 ${lang === "es" ? "text-bloom font-medium" : "text-bark-light"}`}
+            >
+              ES
+            </button>
+          </div>
+          <button
+            className="text-bark p-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -108,22 +125,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          {/* Mobile language switcher */}
-          <div className="flex items-center gap-2 text-sm tracking-widest" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
-            <button
-              onClick={() => setLang("en")}
-              className={`uppercase ${lang === "en" ? "text-bloom font-medium" : "text-bark-light"}`}
-            >
-              EN
-            </button>
-            <span className="text-bark-light/40">|</span>
-            <button
-              onClick={() => setLang("es")}
-              className={`uppercase ${lang === "es" ? "text-bloom font-medium" : "text-bark-light"}`}
-            >
-              ES
-            </button>
-          </div>
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
