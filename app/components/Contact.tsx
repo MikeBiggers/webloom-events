@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import React, { useState } from "react";
 import { Send, Check, MapPin, Mail } from "lucide-react";
 
 const InstagramIcon = ({ size = 16 }: { size?: number }) => (
@@ -51,24 +51,29 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState("sending");
 
-    // Netlify forms submission
     try {
-      const data = new FormData();
-      Object.entries(form).forEach(([k, v]) => data.append(k, v));
-      data.append("form-name", "enquiry");
-
-      await fetch("/", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "19830e68-64e4-42e3-b8ed-0eef1fae66d8",
+          subject: `New Enquiry from ${form.name} — ${form.eventType || "We Bloom Events"}`,
+          from_name: "We Bloom Events Website",
+          ...form,
+        }),
       });
 
-      setFormState("sent");
-      setForm({ name: "", email: "", phone: "", eventType: "", eventDate: "", message: "" });
+      const data = await res.json();
+      if (data.success) {
+        setFormState("sent");
+        setForm({ name: "", email: "", phone: "", eventType: "", eventDate: "", message: "" });
+      } else {
+        setFormState("error");
+      }
     } catch {
       setFormState("error");
     }
