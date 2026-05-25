@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, Check, MapPin, Mail } from "lucide-react";
+import { Send, Check, MapPin, Mail, Phone } from "lucide-react";
 import { useLang } from "../lib/LanguageContext";
 import translations from "../lib/translations";
 
@@ -83,6 +83,12 @@ export default function Contact() {
                   <Mail size={16} className="text-bloom" />
                 </div>
                 <span className="text-sm" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>webloomevents.vlc@gmail.com</span>
+              </li>
+              <li className="flex items-center gap-3 text-bark-light">
+                <div className="w-9 h-9 rounded-full bg-petal flex items-center justify-center flex-shrink-0">
+                  <Phone size={16} className="text-bloom" />
+                </div>
+                <a href="tel:+34624667927" className="text-sm hover:text-bloom transition-colors" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>+34 624 667 927</a>
               </li>
               <li className="flex items-center gap-3 text-bark-light">
                 <div className="w-9 h-9 rounded-full bg-petal flex items-center justify-center flex-shrink-0">
