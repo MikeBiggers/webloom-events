@@ -20,7 +20,7 @@ const InstagramIcon = ({ size = 16 }: { size?: number }) => (
 
 export default function InstagramFeed() {
   return (
-    <section id="instagram" className="py-24 px-6 bg-ivory">
+    <section id="gallery" className="py-24 px-6 bg-ivory">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16">
@@ -28,13 +28,13 @@ export default function InstagramFeed() {
             className="text-sm tracking-[0.35em] uppercase mb-4 text-bloom"
             style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
           >
-            Behind the Scenes
+            Our Portfolio
           </p>
           <h2
             className="text-5xl md:text-6xl font-light italic text-bark"
             style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
           >
-            As Seen on Instagram
+            Gallery
           </h2>
           <div className="w-16 h-px bg-champagne mx-auto mt-6" />
           <p
