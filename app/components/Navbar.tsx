@@ -2,18 +2,22 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "Services", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
+import { useLang } from "../lib/LanguageContext";
+import translations from "../lib/translations";
 
 export default function Navbar() {
+  const { lang, setLang } = useLang();
+  const t = translations[lang].nav;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { label: t.home, href: "#hero" },
+    { label: t.services, href: "#services" },
+    { label: t.gallery, href: "#gallery" },
+    { label: t.about, href: "#about" },
+    { label: t.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -51,13 +55,31 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+
+          {/* Language switcher */}
+          <li className="flex items-center gap-1 text-sm tracking-widest" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
+            <button
+              onClick={() => setLang("en")}
+              className={`uppercase transition-colors duration-200 ${lang === "en" ? "text-bloom font-medium" : "text-bark-light hover:text-bloom"}`}
+            >
+              EN
+            </button>
+            <span className="text-bark-light/40">|</span>
+            <button
+              onClick={() => setLang("es")}
+              className={`uppercase transition-colors duration-200 ${lang === "es" ? "text-bloom font-medium" : "text-bark-light hover:text-bloom"}`}
+            >
+              ES
+            </button>
+          </li>
+
           <li>
             <a
               href="#contact"
               className="text-sm tracking-widest uppercase px-5 py-2.5 bg-bloom text-ivory hover:bg-bloom-dark transition-colors duration-200 rounded-full"
               style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
             >
-              Enquire
+              {t.enquire}
             </a>
           </li>
         </ul>
@@ -86,13 +108,29 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          {/* Mobile language switcher */}
+          <div className="flex items-center gap-2 text-sm tracking-widest" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
+            <button
+              onClick={() => setLang("en")}
+              className={`uppercase ${lang === "en" ? "text-bloom font-medium" : "text-bark-light"}`}
+            >
+              EN
+            </button>
+            <span className="text-bark-light/40">|</span>
+            <button
+              onClick={() => setLang("es")}
+              className={`uppercase ${lang === "es" ? "text-bloom font-medium" : "text-bark-light"}`}
+            >
+              ES
+            </button>
+          </div>
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
             className="text-sm tracking-widest uppercase text-center px-5 py-3 bg-bloom text-ivory hover:bg-bloom-dark transition-colors rounded-full"
             style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
           >
-            Enquire Now
+            {t.enquire}
           </a>
         </div>
       )}
