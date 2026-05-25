@@ -32,7 +32,7 @@ const services = [
     title: "Private Celebrations",
     subtitle: "Make every milestone magical",
     description:
-      "Birthdays, anniversaries, baby showers, and more — we transform any space into something truly special. No occasion is too small or too large for our dedicated team.",
+      "Birthdays, anniversaries, baby showers, and more — we transform any space into something truly special. No occasion is too intimate or too grand; every detail gets the same love and attention.",
     features: [
       "Balloon installations",
       "Themed decoration",

@@ -2,9 +2,9 @@ import Image from "next/image";
 import { Flower2, Award, Users } from "lucide-react";
 
 const stats = [
-  { icon: Flower2, value: "500+", label: "Events Decorated" },
-  { icon: Award, value: "5★", label: "Client Satisfaction" },
-  { icon: Users, value: "100%", label: "Bespoke Designs" },
+  { icon: Flower2, value: "5★", label: "Client Satisfaction" },
+  { icon: Award, value: "100%", label: "Bespoke Designs" },
+  { icon: Users, value: "Every", label: "Event hand-crafted" },
 ];
 
 export default function About() {
@@ -31,7 +31,7 @@ export default function About() {
                   fontFamily: "var(--font-cormorant), Georgia, serif",
                 }}
               >
-                5+
+                Born
               </p>
               <p
                 className="text-xs tracking-wide text-bark-light uppercase mt-1"
@@ -39,7 +39,7 @@ export default function About() {
                   fontFamily: "var(--font-jost), system-ui, sans-serif",
                 }}
               >
-                Years of creating memories
+                from a passion for beauty
               </p>
             </div>
           </div>
@@ -64,17 +64,26 @@ export default function About() {
               className="text-bark-light leading-relaxed mb-5"
               style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
             >
-              We Bloom Events was founded with a single belief — that every
-              celebration deserves to be extraordinary. We are a passionate team
-              of florists and event stylists dedicated to transforming spaces
-              into breathtaking environments that tell your story.
+              We Bloom Events was born from a simple belief — that every
+              celebration deserves to be extraordinary. We are passionate
+              florists and event stylists dedicated to transforming spaces into
+              breathtaking environments that tell your story.
+            </p>
+            <p
+              className="text-bark-light leading-relaxed mb-5"
+              style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
+            >
+              As a boutique studio, we take on a select number of events so
+              that every client receives our full focus and creativity. You
+              won&apos;t be one booking among hundreds — you&apos;ll be the
+              event we pour everything into.
             </p>
             <p
               className="text-bark-light leading-relaxed mb-10"
               style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
             >
               From the very first consultation to the final petal being placed,
-              we work closely with you to ensure every detail is perfect. No two
+              we work closely with you to bring your vision to life. No two
               events are alike — and we wouldn&apos;t have it any other way.
             </p>
 
