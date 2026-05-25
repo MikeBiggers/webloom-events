@@ -92,7 +92,7 @@ const translations = {
       subheading: "We'd love to hear about your event",
       description:
         "Fill in the form and we'll be in touch within 24 hours to discuss your vision and provide a personalised quote.",
-      location: "Available nationwide",
+      location: "Valencia Province",
       fields: {
         name: "Full Name",
         email: "Email Address",
@@ -219,7 +219,7 @@ const translations = {
       subheading: "Nos encantaría saber más sobre tu evento",
       description:
         "Rellena el formulario y nos pondremos en contacto contigo en menos de 24 horas para hablar de tu visión y ofrecerte un presupuesto personalizado.",
-      location: "Disponibles en toda España",
+      location: "Provincia de Valencia",
       fields: {
         name: "Nombre Completo",
         email: "Correo Electrónico",
