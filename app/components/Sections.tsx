@@ -4,6 +4,7 @@ import Services from "./Services";
 import InstagramFeed from "./InstagramFeed";
 import About from "./About";
 import Founders from "./Founders";
+import Faq from "./Faq";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
@@ -20,6 +21,7 @@ export default function Sections() {
         <InstagramFeed />
         <About />
         <Founders />
+        <Faq />
         <Contact />
       </main>
       <Footer />

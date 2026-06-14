@@ -14,7 +14,7 @@ export default function Founders() {
   const t = translations[lang].founders;
 
   return (
-    <section id="founders" className="py-24 px-6 bg-ivory reveal">
+    <section id="founders" className="py-24 px-6 bg-ivory-dark reveal">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-light text-bark text-balance" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>

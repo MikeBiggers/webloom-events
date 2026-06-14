@@ -111,6 +111,35 @@ const translations = {
         },
       ],
     },
+    faq: {
+      heading: "Frequently Asked Questions",
+      items: [
+        {
+          q: "How far in advance should we book?",
+          a: "As early as you can — popular dates fill up months ahead. That said, we'll always do our best to help with shorter timelines, so do get in touch even if your date is soon.",
+        },
+        {
+          q: "Which areas do you cover?",
+          a: "We're based in Valencia and cover the city and surrounding province. We're happy to travel further afield for the right event — just ask.",
+        },
+        {
+          q: "Do you offer a consultation?",
+          a: "Always. Every project begins with a conversation about your vision, venue and style, so the design feels completely yours.",
+        },
+        {
+          q: "Do you only do weddings?",
+          a: "Not at all. We style weddings, corporate events and private celebrations — from intimate gatherings to large installations.",
+        },
+        {
+          q: "Can you work to our budget?",
+          a: "Yes. We design around your priorities and are transparent about what's achievable at every level, so you always know where your investment goes.",
+        },
+        {
+          q: "Do you handle setup and takedown?",
+          a: "Yes — full setup before your event and collection afterwards are part of the service, so you can simply enjoy the day.",
+        },
+      ],
+    },
     contact: {
       label: "Get In Touch",
       heading: "Let's Create Something Beautiful",
@@ -263,6 +292,35 @@ const translations = {
           name: "Ana",
           role: "Cofundadora y Estilista de Eventos",
           bio: "Ana cofundó We Bloom Events por su pasión por dar vida a las ideas de cada cliente. Desde el primer mood board hasta el último pétalo, vuelca creatividad y dedicación para que cada evento se sienta natural, personal y precioso.",
+        },
+      ],
+    },
+    faq: {
+      heading: "Preguntas Frecuentes",
+      items: [
+        {
+          q: "¿Con cuánta antelación deberíamos reservar?",
+          a: "Cuanto antes mejor — las fechas más solicitadas se reservan con meses de antelación. Aun así, siempre haremos lo posible por ayudarte con plazos más cortos, así que escríbenos aunque tu fecha esté cerca.",
+        },
+        {
+          q: "¿Qué zonas cubrís?",
+          a: "Estamos en Valencia y cubrimos la ciudad y la provincia. Encantadas de desplazarnos más lejos para el evento adecuado — solo tienes que pedirlo.",
+        },
+        {
+          q: "¿Ofrecéis una consulta?",
+          a: "Siempre. Cada proyecto empieza con una conversación sobre tu visión, el lugar y tu estilo, para que el diseño sea completamente tuyo.",
+        },
+        {
+          q: "¿Solo hacéis bodas?",
+          a: "Para nada. Decoramos bodas, eventos corporativos y celebraciones privadas — desde reuniones íntimas hasta grandes instalaciones.",
+        },
+        {
+          q: "¿Podéis adaptaros a nuestro presupuesto?",
+          a: "Sí. Diseñamos en torno a tus prioridades y somos transparentes sobre lo que es posible en cada nivel, para que sepas siempre dónde va tu inversión.",
+        },
+        {
+          q: "¿Os encargáis del montaje y desmontaje?",
+          a: "Sí — el montaje completo antes del evento y la recogida posterior forman parte del servicio, para que solo tengas que disfrutar del día.",
         },
       ],
     },
