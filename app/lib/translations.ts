@@ -67,6 +67,15 @@ const translations = {
       description:
         "Follow @webloomevents for daily inspiration from our latest events.",
       followBtn: "Follow @webloomevents",
+      categories: {
+        all: "All",
+        weddings: "Weddings",
+        corporate: "Corporate",
+        private: "Private",
+      },
+      lightboxClose: "Close",
+      lightboxPrev: "Previous",
+      lightboxNext: "Next",
     },
     about: {
       label: "Our Story",
@@ -197,6 +206,15 @@ const translations = {
       description:
         "Síguenos en @webloomevents para inspiración diaria de nuestros últimos eventos.",
       followBtn: "Seguir @webloomevents",
+      categories: {
+        all: "Todo",
+        weddings: "Bodas",
+        corporate: "Corporativo",
+        private: "Privado",
+      },
+      lightboxClose: "Cerrar",
+      lightboxPrev: "Anterior",
+      lightboxNext: "Siguiente",
     },
     about: {
       label: "Nuestra Historia",
