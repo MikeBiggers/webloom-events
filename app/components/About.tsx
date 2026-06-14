@@ -19,8 +19,8 @@ export default function About() {
           <div className="relative">
             <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1639986098217-17112e22f1ed?w=800&h=1000&fit=crop&q=80"
-                alt="We Bloom Events creating a floral arrangement"
+                src="/instagram/Event2.jpg"
+                alt="A bride and groom beneath a floral arch styled by We Bloom Events in Valencia"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

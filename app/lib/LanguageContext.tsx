@@ -13,18 +13,21 @@ const LanguageContext = createContext<LanguageContextType>({
   setLang: () => {},
 });
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>("en");
+export function LanguageProvider({
+  children,
+  initialLang = "en",
+}: {
+  children: React.ReactNode;
+  initialLang?: Language;
+}) {
+  // The URL (/ vs /es) is the source of truth so each language is its own
+  // indexable page. setLang is kept for any in-page needs but switching
+  // languages is done by navigating between routes (see Navbar).
+  const [lang, setLang] = useState<Language>(initialLang);
 
   useEffect(() => {
-    const saved = localStorage.getItem("we-bloom-lang") as Language;
-    if (saved === "en" || saved === "es") setLangState(saved);
-  }, []);
-
-  const setLang = (l: Language) => {
-    setLangState(l);
-    localStorage.setItem("we-bloom-lang", l);
-  };
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   return (
     <LanguageContext.Provider value={{ lang, setLang }}>

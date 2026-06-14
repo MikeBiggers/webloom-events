@@ -80,9 +80,9 @@ const translations = {
       para3:
         "From the very first consultation to the final petal being placed, we work closely with you to bring your vision to life. No two events are alike — and we wouldn't have it any other way.",
       stats: [
-        { value: "5★", label: "Client Satisfaction" },
-        { value: "100%", label: "Bespoke Designs" },
-        { value: "Every", label: "Event hand-crafted" },
+        { value: "Boutique", label: "Studio, limited bookings" },
+        { value: "100%", label: "Bespoke designs" },
+        { value: "Valencia", label: "& surrounding areas" },
       ],
       cta: "Work With Us",
     },
@@ -121,6 +121,9 @@ const translations = {
         "Thank you! We'll be in touch within 24 hours to discuss your event.",
       errorMessage:
         "Something went wrong. Please try again or email us directly.",
+      whatsapp: "WhatsApp",
+      whatsappMessage:
+        "Hi We Bloom Events! I'd love to talk about decoration for my event.",
     },
     footer: {
       tagline: "Bespoke event decoration",
@@ -207,9 +210,9 @@ const translations = {
       para3:
         "Desde la primera consulta hasta el último pétalo colocado, trabajamos contigo para hacer realidad tu visión. No hay dos eventos iguales — y así es exactamente como nos gusta.",
       stats: [
-        { value: "5★", label: "Satisfacción del Cliente" },
-        { value: "100%", label: "Diseños a Medida" },
-        { value: "Cada", label: "Evento elaborado a mano" },
+        { value: "Boutique", label: "Estudio, reservas limitadas" },
+        { value: "100%", label: "Diseños a medida" },
+        { value: "Valencia", label: "y alrededores" },
       ],
       cta: "Trabajar Con Nosotros",
     },
@@ -248,6 +251,9 @@ const translations = {
         "¡Gracias! Nos pondremos en contacto contigo en menos de 24 horas para hablar sobre tu evento.",
       errorMessage:
         "Algo salió mal. Por favor inténtalo de nuevo o escríbenos directamente.",
+      whatsapp: "WhatsApp",
+      whatsappMessage:
+        "¡Hola We Bloom Events! Me encantaría hablar sobre la decoración de mi evento.",
     },
     footer: {
       tagline: "Decoración de eventos a medida",

@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useLang } from "../lib/LanguageContext";
 import translations from "../lib/translations";
 
 export default function Navbar() {
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
   const t = translations[lang].nav;
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,21 +57,23 @@ export default function Navbar() {
             </li>
           ))}
 
-          {/* Language switcher */}
+          {/* Language switcher — navigates between indexable routes */}
           <li className="flex items-center gap-1 text-sm tracking-widest" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
-            <button
-              onClick={() => setLang("en")}
+            <Link
+              href="/"
+              hrefLang="en"
               className={`uppercase transition-colors duration-200 ${lang === "en" ? "text-bloom font-medium" : "text-bark-light hover:text-bloom"}`}
             >
               EN
-            </button>
+            </Link>
             <span className="text-bark-light/40">|</span>
-            <button
-              onClick={() => setLang("es")}
+            <Link
+              href="/es"
+              hrefLang="es"
               className={`uppercase transition-colors duration-200 ${lang === "es" ? "text-bloom font-medium" : "text-bark-light hover:text-bloom"}`}
             >
               ES
-            </button>
+            </Link>
           </li>
 
           <li>
@@ -87,19 +90,21 @@ export default function Navbar() {
         {/* Mobile: language switcher + hamburger always visible */}
         <div className="md:hidden flex items-center gap-3">
           <div className="flex items-center gap-1 text-sm tracking-widest" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
-            <button
-              onClick={() => setLang("en")}
+            <Link
+              href="/"
+              hrefLang="en"
               className={`uppercase transition-colors duration-200 ${lang === "en" ? "text-bloom font-medium" : "text-bark-light"}`}
             >
               EN
-            </button>
+            </Link>
             <span className="text-bark-light/40">|</span>
-            <button
-              onClick={() => setLang("es")}
+            <Link
+              href="/es"
+              hrefLang="es"
               className={`uppercase transition-colors duration-200 ${lang === "es" ? "text-bloom font-medium" : "text-bark-light"}`}
             >
               ES
-            </button>
+            </Link>
           </div>
           <button
             className="text-bark p-1"

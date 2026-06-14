@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, Check, MapPin, Mail, Phone } from "lucide-react";
+import { Send, Check, MapPin, Mail, Phone, MessageCircle } from "lucide-react";
 import { useLang } from "../lib/LanguageContext";
 import translations from "../lib/translations";
+import { whatsappLink } from "../lib/site";
 
 const InstagramIcon = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -92,6 +93,12 @@ export default function Contact() {
               </li>
               <li className="flex items-center gap-3 text-bark-light">
                 <div className="w-9 h-9 rounded-full bg-petal flex items-center justify-center flex-shrink-0">
+                  <MessageCircle size={16} className="text-bloom" />
+                </div>
+                <a href={whatsappLink(t.whatsappMessage)} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-bloom transition-colors" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.whatsapp}</a>
+              </li>
+              <li className="flex items-center gap-3 text-bark-light">
+                <div className="w-9 h-9 rounded-full bg-petal flex items-center justify-center flex-shrink-0">
                   <MapPin size={16} className="text-bloom" />
                 </div>
                 <span className="text-sm" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.location}</span>
@@ -125,27 +132,27 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-petal p-8 space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.name} *</label>
-                    <input name="name" type="text" required value={form.name} onChange={handleChange} placeholder={t.fields.namePlaceholder} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }} />
+                    <label htmlFor="name" className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.name} *</label>
+                    <input id="name" name="name" type="text" required value={form.name} onChange={handleChange} placeholder={t.fields.namePlaceholder} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }} />
                   </div>
                   <div>
-                    <label className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.email} *</label>
-                    <input name="email" type="email" required value={form.email} onChange={handleChange} placeholder={t.fields.emailPlaceholder} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }} />
+                    <label htmlFor="email" className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.email} *</label>
+                    <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} placeholder={t.fields.emailPlaceholder} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }} />
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.phone}</label>
-                    <input name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder={t.fields.phonePlaceholder} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }} />
+                    <label htmlFor="phone" className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.phone}</label>
+                    <input id="phone" name="phone" type="tel" value={form.phone} onChange={handleChange} placeholder={t.fields.phonePlaceholder} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }} />
                   </div>
                   <div>
-                    <label className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.date}</label>
-                    <input name="eventDate" type="date" value={form.eventDate} onChange={handleChange} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }} />
+                    <label htmlFor="eventDate" className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.date}</label>
+                    <input id="eventDate" name="eventDate" type="date" value={form.eventDate} onChange={handleChange} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }} />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.eventType} *</label>
-                  <select name="eventType" required value={form.eventType} onChange={handleChange} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
+                  <label htmlFor="eventType" className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.eventType} *</label>
+                  <select id="eventType" name="eventType" required value={form.eventType} onChange={handleChange} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
                     <option value="">{t.fields.selectPlaceholder}</option>
                     {t.eventTypes.map((type) => (
                       <option key={type} value={type}>{type}</option>
@@ -153,8 +160,8 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.message} *</label>
-                  <textarea name="message" required rows={4} value={form.message} onChange={handleChange} placeholder={t.fields.messagePlaceholder} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif", resize: "none" }} />
+                  <label htmlFor="message" className="block text-xs tracking-widest uppercase text-bark-light mb-1.5" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.fields.message}</label>
+                  <textarea id="message" name="message" rows={4} value={form.message} onChange={handleChange} placeholder={t.fields.messagePlaceholder} className={inputClass} style={{ fontFamily: "var(--font-jost), system-ui, sans-serif", resize: "none" }} />
                 </div>
                 {formState === "error" && (
                   <p className="text-sm text-red-500" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>{t.errorMessage}</p>
