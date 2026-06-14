@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Services from "./Services";
+import Packages from "./Packages";
 import InstagramFeed from "./InstagramFeed";
 import About from "./About";
 import Founders from "./Founders";
@@ -20,6 +21,7 @@ export default function Sections() {
       <main>
         <Hero />
         <Services />
+        <Packages />
         <InstagramFeed />
         <About />
         <Founders />

@@ -111,6 +111,37 @@ const translations = {
         },
       ],
     },
+    packages: {
+      heading: "Our Packages",
+      subheading:
+        "Two closed-price collections for 100 guests, or a fully bespoke quote — whatever suits your celebration.",
+      scope: "100 guests · 10 tables · 10 centrepieces",
+      includesLabel: "Included",
+      includes: ["The bride's bouquet", "10 table centrepieces"],
+      closedPriceLabel: "Closed price",
+      excludesNote:
+        "Closed prices cover the bride's bouquet and 10 centrepieces only. Extras such as a photobooth, welcome sign or seating plan aren't included — add these with a bespoke quote.",
+      cta: "Enquire",
+      items: [
+        {
+          name: "Rustic",
+          style: "Eucalyptus & rustic blooms",
+          price: "€—",
+        },
+        {
+          name: "Romantic",
+          style: "Classic roses",
+          price: "€—",
+        },
+      ],
+      bespoke: {
+        name: "Bespoke",
+        style: "Designed entirely around you",
+        description:
+          "Choose every detail — your flowers, your style and any extras, from photobooths to welcome signs and seating plans. We'll build a quote around exactly what you want.",
+        price: "Tailored quote",
+      },
+    },
     faq: {
       heading: "Frequently Asked Questions",
       items: [
@@ -294,6 +325,37 @@ const translations = {
           bio: "Ana cofundó We Bloom Events por su pasión por dar vida a las ideas de cada cliente. Desde el primer mood board hasta el último pétalo, vuelca creatividad y dedicación para que cada evento se sienta natural, personal y precioso.",
         },
       ],
+    },
+    packages: {
+      heading: "Nuestros Packs",
+      subheading:
+        "Dos colecciones de precio cerrado para 100 invitados, o un presupuesto totalmente personalizado — lo que mejor se adapte a tu celebración.",
+      scope: "100 invitados · 10 mesas · 10 centros de mesa",
+      includesLabel: "Incluye",
+      includes: ["El ramo de la novia", "10 centros de mesa"],
+      closedPriceLabel: "Precio cerrado",
+      excludesNote:
+        "Los precios cerrados incluyen únicamente el ramo de la novia y los 10 centros de mesa. Los extras como photobooth, cartel de bienvenida o seating plan no están incluidos — añádelos con un presupuesto personalizado.",
+      cta: "Consultar",
+      items: [
+        {
+          name: "Rústico",
+          style: "Eucalipto y flores rústicas",
+          price: "€—",
+        },
+        {
+          name: "Romántico",
+          style: "Rosas clásicas",
+          price: "€—",
+        },
+      ],
+      bespoke: {
+        name: "Personalizado",
+        style: "Diseñado completamente a tu medida",
+        description:
+          "Elige cada detalle — tus flores, tu estilo y cualquier extra, desde photobooth hasta cartel de bienvenida y seating plan. Prepararemos un presupuesto a tu medida.",
+        price: "Presupuesto a medida",
+      },
     },
     faq: {
       heading: "Preguntas Frecuentes",
