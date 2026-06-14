@@ -95,6 +95,22 @@ const translations = {
       ],
       cta: "Work With Us",
     },
+    founders: {
+      heading: "Meet the Founders",
+      subheading: "The two stylists behind every We Bloom event",
+      members: [
+        {
+          name: "Andra",
+          role: "Co-founder & Event Stylist",
+          bio: "Andra co-founded We Bloom Events on the belief that the smallest details create the biggest moments. She brings a calm, considered eye to every brief — pairing seasonal blooms with each space so a celebration feels unmistakably yours.",
+        },
+        {
+          name: "Ana",
+          role: "Co-founder & Event Stylist",
+          bio: "Ana co-founded We Bloom Events out of a love for bringing people's visions to life. From the first mood board to the final petal, she pours creativity and care into making every event feel effortless, personal and beautiful.",
+        },
+      ],
+    },
     contact: {
       label: "Get In Touch",
       heading: "Let's Create Something Beautiful",
@@ -233,6 +249,22 @@ const translations = {
         { value: "Valencia", label: "y alrededores" },
       ],
       cta: "Trabajar Con Nosotros",
+    },
+    founders: {
+      heading: "Conoce a las Fundadoras",
+      subheading: "Las dos estilistas detrás de cada evento de We Bloom",
+      members: [
+        {
+          name: "Andra",
+          role: "Cofundadora y Estilista de Eventos",
+          bio: "Andra cofundó We Bloom Events con la convicción de que los pequeños detalles crean los grandes momentos. Aporta una mirada serena y cuidada a cada proyecto, combinando flores de temporada con cada espacio para que la celebración sea inconfundiblemente tuya.",
+        },
+        {
+          name: "Ana",
+          role: "Cofundadora y Estilista de Eventos",
+          bio: "Ana cofundó We Bloom Events por su pasión por dar vida a las ideas de cada cliente. Desde el primer mood board hasta el último pétalo, vuelca creatividad y dedicación para que cada evento se sienta natural, personal y precioso.",
+        },
+      ],
     },
     contact: {
       label: "Ponte en Contacto",

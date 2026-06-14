@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Services from "./Services";
 import InstagramFeed from "./InstagramFeed";
 import About from "./About";
+import Founders from "./Founders";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
@@ -18,6 +19,7 @@ export default function Sections() {
         <Services />
         <InstagramFeed />
         <About />
+        <Founders />
         <Contact />
       </main>
       <Footer />
