@@ -49,3 +49,59 @@ h1, h2, h3, h4 {
     transition: none;
   }
 }
+
+/* Brand bees drifting gently across the page. Decorative only:
+   pointer-events:none, sits below the navbar, and is hidden entirely for
+   anyone who prefers reduced motion. */
+.bee-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+.bee img {
+  display: block;
+  will-change: transform;
+}
+.bee--1 {
+  animation: bee-path-1 38s linear infinite;
+}
+.bee--2 {
+  animation: bee-path-2 52s linear infinite;
+}
+/* inner element flutters to suggest buzzing flight */
+.bee img {
+  animation: bee-buzz 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes bee-path-1 {
+  0%   { transform: translate(-8vw, 72vh); }
+  20%  { transform: translate(22vw, 40vh); }
+  45%  { transform: translate(48vw, 62vh); }
+  70%  { transform: translate(74vw, 28vh); }
+  100% { transform: translate(112vw, 50vh); }
+}
+@keyframes bee-path-2 {
+  0%   { transform: translate(112vw, 22vh) scaleX(-1); }
+  25%  { transform: translate(72vw, 55vh) scaleX(-1); }
+  55%  { transform: translate(40vw, 24vh) scaleX(-1); }
+  80%  { transform: translate(14vw, 60vh) scaleX(-1); }
+  100% { transform: translate(-10vw, 36vh) scaleX(-1); }
+}
+@keyframes bee-buzz {
+  from { transform: translateY(-3px) rotate(-7deg); }
+  to   { transform: translateY(3px) rotate(7deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bee-layer {
+    display: none;
+  }
+}

@@ -9,11 +9,13 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
 import ScrollReveal from "./ScrollReveal";
+import Bees from "./Bees";
 
 export default function Sections() {
   return (
     <>
       <ScrollReveal />
+      <Bees />
       <Navbar />
       <main>
         <Hero />

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLang } from "../lib/LanguageContext";
 import translations from "../lib/translations";
 
@@ -21,10 +22,14 @@ export default function Footer() {
   return (
     <footer className="bg-bark text-ivory/80 py-14 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="text-center md:text-left">
-          <p className="text-2xl font-light tracking-widest text-ivory mb-1" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
-            We Bloom Events
-          </p>
+        <div className="flex flex-col items-center md:items-start">
+          <Image
+            src="/logo-light.png"
+            alt="We Bloom Events"
+            width={218}
+            height={185}
+            className="h-24 w-auto mb-3"
+          />
           <p className="text-sm tracking-wide text-ivory/60">{t.tagline}</p>
         </div>
 
