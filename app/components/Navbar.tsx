@@ -26,6 +26,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Over the dark photo hero the bar is transparent and needs light text;
+  // once scrolled onto the ivory bar it switches to dark text.
+  const light = !scrolled;
+  const brandCls = light ? "text-ivory" : "text-bloom";
+  const linkCls = light ? "text-ivory/90 hover:text-ivory" : "text-bark-light hover:text-bloom";
+  const langActive = light ? "text-ivory font-medium" : "text-bloom font-medium";
+  const langInactive = light ? "text-ivory/70 hover:text-ivory" : "text-bark-light hover:text-bloom";
+  const dividerCls = light ? "text-ivory/40" : "text-bark-light/40";
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -37,7 +46,7 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <a
           href="#hero"
-          className="font-heading text-2xl font-light tracking-widest text-bloom"
+          className={`font-heading text-2xl font-light tracking-widest transition-colors duration-300 ${brandCls}`}
           style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
         >
           We Bloom Events
@@ -49,7 +58,7 @@ export default function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-sm tracking-widest uppercase text-bark-light hover:text-bloom transition-colors duration-200"
+                className={`text-sm tracking-widest uppercase transition-colors duration-200 ${linkCls}`}
                 style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
               >
                 {link.label}
@@ -62,15 +71,15 @@ export default function Navbar() {
             <Link
               href="/"
               hrefLang="en"
-              className={`uppercase transition-colors duration-200 ${lang === "en" ? "text-bloom font-medium" : "text-bark-light hover:text-bloom"}`}
+              className={`uppercase transition-colors duration-200 ${lang === "en" ? langActive : langInactive}`}
             >
               EN
             </Link>
-            <span className="text-bark-light/40">|</span>
+            <span className={dividerCls}>|</span>
             <Link
               href="/es"
               hrefLang="es"
-              className={`uppercase transition-colors duration-200 ${lang === "es" ? "text-bloom font-medium" : "text-bark-light hover:text-bloom"}`}
+              className={`uppercase transition-colors duration-200 ${lang === "es" ? langActive : langInactive}`}
             >
               ES
             </Link>
@@ -93,21 +102,21 @@ export default function Navbar() {
             <Link
               href="/"
               hrefLang="en"
-              className={`uppercase transition-colors duration-200 ${lang === "en" ? "text-bloom font-medium" : "text-bark-light"}`}
+              className={`uppercase transition-colors duration-200 ${lang === "en" ? langActive : langInactive}`}
             >
               EN
             </Link>
-            <span className="text-bark-light/40">|</span>
+            <span className={dividerCls}>|</span>
             <Link
               href="/es"
               hrefLang="es"
-              className={`uppercase transition-colors duration-200 ${lang === "es" ? "text-bloom font-medium" : "text-bark-light"}`}
+              className={`uppercase transition-colors duration-200 ${lang === "es" ? langActive : langInactive}`}
             >
               ES
             </Link>
           </div>
           <button
-            className="text-bark p-1"
+            className={`p-1 transition-colors duration-300 ${light ? "text-ivory" : "text-bark"}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >

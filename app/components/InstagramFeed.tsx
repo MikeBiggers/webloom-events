@@ -17,17 +17,14 @@ export default function InstagramFeed() {
   const t = translations[lang].gallery;
 
   return (
-    <section id="gallery" className="py-24 px-6 bg-ivory">
+    <section id="gallery" className="py-24 px-6 bg-ivory reveal">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm tracking-[0.35em] uppercase mb-4 text-bloom" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
-            {t.label}
-          </p>
-          <h2 className="text-5xl md:text-6xl font-light italic text-bark" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+          <h2 className="text-4xl md:text-5xl font-light text-bark text-balance" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
             {t.heading}
           </h2>
           <div className="w-16 h-px bg-champagne mx-auto mt-6" />
-          <p className="mt-6 text-bark-light text-base max-w-xl mx-auto" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
+          <p className="mt-6 text-bark-light text-base max-w-xl mx-auto text-pretty" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
             {t.description}
           </p>
         </div>

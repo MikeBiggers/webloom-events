@@ -12,7 +12,7 @@ export default function About() {
   const t = translations[lang].about;
 
   return (
-    <section id="about" className="py-24 px-6 bg-ivory">
+    <section id="about" className="py-24 px-6 bg-ivory reveal">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Image side */}
@@ -38,10 +38,7 @@ export default function About() {
 
           {/* Text side */}
           <div>
-            <p className="text-sm tracking-[0.35em] uppercase mb-4 text-bloom" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
-              {t.label}
-            </p>
-            <h2 className="text-5xl md:text-6xl font-light italic text-bark mb-6 leading-tight" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+            <h2 className="text-4xl md:text-5xl font-light italic text-bark mb-6 leading-tight text-balance" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
               {t.heading}
             </h2>
             <div className="w-16 h-px bg-champagne mb-8" />

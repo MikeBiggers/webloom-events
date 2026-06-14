@@ -57,13 +57,10 @@ export default function Contact() {
   const inputClass = "w-full bg-white border border-petal rounded-xl px-4 py-3 text-bark text-sm placeholder-bark-light/50 focus:outline-none focus:border-bloom transition-colors";
 
   return (
-    <section id="contact" className="py-24 px-6 bg-ivory-dark">
+    <section id="contact" className="py-24 px-6 bg-ivory-dark reveal">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm tracking-[0.35em] uppercase mb-4 text-bloom" style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}>
-            {t.label}
-          </p>
-          <h2 className="text-5xl md:text-6xl font-light italic text-bark" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+          <h2 className="text-4xl md:text-5xl font-light text-bark text-balance" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
             {t.heading}
           </h2>
           <div className="w-16 h-px bg-champagne mx-auto mt-6" />

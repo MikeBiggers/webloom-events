@@ -6,10 +6,12 @@ import About from "./About";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import WhatsAppButton from "./WhatsAppButton";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Sections() {
   return (
     <>
+      <ScrollReveal />
       <Navbar />
       <main>
         <Hero />
