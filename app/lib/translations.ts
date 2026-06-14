@@ -126,12 +126,12 @@ const translations = {
         {
           name: "Rustic",
           style: "Eucalyptus & rustic blooms",
-          price: "€—",
+          price: "On request",
         },
         {
           name: "Romantic",
           style: "Classic roses",
-          price: "€—",
+          price: "On request",
         },
       ],
       bespoke: {
@@ -341,12 +341,12 @@ const translations = {
         {
           name: "Rústico",
           style: "Eucalipto y flores rústicas",
-          price: "€—",
+          price: "Consúltanos",
         },
         {
           name: "Romántico",
           style: "Rosas clásicas",
-          price: "€—",
+          price: "Consúltanos",
         },
       ],
       bespoke: {
