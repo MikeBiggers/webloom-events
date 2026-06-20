@@ -29,7 +29,6 @@ export default function Navbar() {
   // Over the dark photo hero the bar is transparent and needs light text;
   // once scrolled onto the ivory bar it switches to dark text.
   const light = !scrolled;
-  const brandCls = light ? "text-ivory" : "text-bloom";
   const linkCls = light ? "text-ivory/90 hover:text-ivory" : "text-bark-light hover:text-bloom";
   const langActive = light ? "text-ivory font-medium" : "text-bloom font-medium";
   const langInactive = light ? "text-ivory/70 hover:text-ivory" : "text-bark-light hover:text-bloom";
@@ -44,12 +43,13 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a
-          href="#hero"
-          className={`font-heading text-2xl font-light tracking-widest transition-colors duration-300 ${brandCls}`}
-          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-        >
-          We Bloom Events
+        <a href="#hero" aria-label="We Bloom Events" className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={light ? "/logo-light.png" : "/logo.png"}
+            alt="We Bloom Events"
+            className="h-12 md:h-14 w-auto transition-opacity duration-300"
+          />
         </a>
 
         {/* Desktop nav */}

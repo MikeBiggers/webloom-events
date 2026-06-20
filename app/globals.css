@@ -50,58 +50,81 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Brand bees drifting gently across the page. Decorative only:
-   pointer-events:none, sits below the navbar, and is hidden entirely for
-   anyone who prefers reduced motion. */
-.bee-layer {
-  position: fixed;
-  inset: 0;
-  z-index: 30;
-  pointer-events: none;
-  overflow: hidden;
+/* Brand bees that orbit the hero logo wording, weaving in front of and behind
+   the letters (via stepped z-index) for a 3D feel, wings flapping. Decorative
+   only: pointer-events:none, and hidden entirely under reduced motion. */
+.logo-lockup {
+  position: relative;
+  display: inline-block;
+  isolation: isolate; /* scope the bee/letter z-index stack to the lockup */
 }
-.bee {
+.logo-lockup h1,
+.logo-lockup .lockup-tagline {
+  position: relative;
+  z-index: 1; /* letters sit between the "behind" (0) and "front" (2) bees */
+}
+.logo-bee {
   position: absolute;
-  top: 0;
-  left: 0;
-  will-change: transform;
+  top: 50%;
+  left: 50%;
+  margin: -24px 0 0 -32px; /* roughly centre the bee on the lockup */
+  pointer-events: none;
 }
-.bee img {
-  display: block;
-  will-change: transform;
+.logo-bee--1 {
+  animation: bee-orbit-1 13s ease-in-out infinite;
 }
-.bee--1 {
-  animation: bee-path-1 38s linear infinite;
+.logo-bee--2 {
+  animation: bee-orbit-2 17s ease-in-out infinite;
 }
-.bee--2 {
-  animation: bee-path-2 52s linear infinite;
+.logo-bee .wing {
+  transform-box: view-box;
+  transform-origin: 40px 17px;
+  animation: wing-flap 0.16s ease-in-out infinite alternate;
 }
-/* inner element flutters to suggest buzzing flight */
-.bee img {
-  animation: bee-buzz 0.5s ease-in-out infinite alternate;
+.logo-bee .wing--back {
+  transform-origin: 38px 18px;
+  animation-delay: -0.08s;
 }
 
-@keyframes bee-path-1 {
-  0%   { transform: translate(-8vw, 72vh); }
-  20%  { transform: translate(22vw, 40vh); }
-  45%  { transform: translate(48vw, 62vh); }
-  70%  { transform: translate(74vw, 28vh); }
-  100% { transform: translate(112vw, 50vh); }
+@keyframes bee-orbit-1 {
+  0%   { transform: translate(-170px, 10px) rotate(8deg); z-index: 2; }
+  25%  { transform: translate(-70px, -60px) rotate(-6deg); z-index: 2; }
+  50%  { transform: translate(110px, -30px) rotate(10deg); z-index: 0; }
+  75%  { transform: translate(30px, 55px) rotate(-4deg); z-index: 0; }
+  100% { transform: translate(-170px, 10px) rotate(8deg); z-index: 2; }
 }
-@keyframes bee-path-2 {
-  0%   { transform: translate(112vw, 22vh) scaleX(-1); }
-  25%  { transform: translate(72vw, 55vh) scaleX(-1); }
-  55%  { transform: translate(40vw, 24vh) scaleX(-1); }
-  80%  { transform: translate(14vw, 60vh) scaleX(-1); }
-  100% { transform: translate(-10vw, 36vh) scaleX(-1); }
+@keyframes bee-orbit-2 {
+  0%   { transform: translate(150px, -10px) scaleX(-1) rotate(6deg); z-index: 0; }
+  30%  { transform: translate(40px, 50px) scaleX(-1) rotate(-8deg); z-index: 0; }
+  60%  { transform: translate(-120px, 0px) scaleX(-1) rotate(6deg); z-index: 2; }
+  85%  { transform: translate(-30px, -55px) scaleX(-1) rotate(-4deg); z-index: 2; }
+  100% { transform: translate(150px, -10px) scaleX(-1) rotate(6deg); z-index: 0; }
 }
-@keyframes bee-buzz {
-  from { transform: translateY(-3px) rotate(-7deg); }
-  to   { transform: translateY(3px) rotate(7deg); }
+@keyframes wing-flap {
+  from { transform: rotate(-40deg); }
+  to   { transform: rotate(46deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bee-layer {
+  .logo-bee {
     display: none;
+  }
+}
+
+/* Wider screens: let the bees range a little further around the wordmark */
+@media (min-width: 768px) {
+  @keyframes bee-orbit-1 {
+    0%   { transform: translate(-270px, 10px) rotate(8deg); z-index: 2; }
+    25%  { transform: translate(-95px, -95px) rotate(-6deg); z-index: 2; }
+    50%  { transform: translate(190px, -45px) rotate(10deg); z-index: 0; }
+    75%  { transform: translate(45px, 90px) rotate(-4deg); z-index: 0; }
+    100% { transform: translate(-270px, 10px) rotate(8deg); z-index: 2; }
+  }
+  @keyframes bee-orbit-2 {
+    0%   { transform: translate(250px, -10px) scaleX(-1) rotate(6deg); z-index: 0; }
+    30%  { transform: translate(70px, 85px) scaleX(-1) rotate(-8deg); z-index: 0; }
+    60%  { transform: translate(-210px, 0px) scaleX(-1) rotate(6deg); z-index: 2; }
+    85%  { transform: translate(-50px, -90px) scaleX(-1) rotate(-4deg); z-index: 2; }
+    100% { transform: translate(250px, -10px) scaleX(-1) rotate(6deg); z-index: 0; }
   }
 }

@@ -12,6 +12,7 @@ const translations = {
     },
     hero: {
       label: "Bespoke Event Decoration",
+      tagline: "Events Styling & Décor",
       line1: "Where Every",
       line2: "Moment Blooms",
       description:
@@ -227,6 +228,7 @@ const translations = {
     },
     hero: {
       label: "Decoración de Eventos a Medida",
+      tagline: "Estilismo y Decoración de Eventos",
       line1: "Donde Cada",
       line2: "Momento Florece",
       description:
